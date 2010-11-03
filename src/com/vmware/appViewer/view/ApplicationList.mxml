@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Panel xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 title="Application List"
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/mx" width="400" height="300" xmlns:view="com.vmware.appViewer.view.*">
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<fx:Script>
+		<![CDATA[
+			import com.vmware.appViewer.event.ApplicationSelectedEvent;
+			import com.vmware.appViewer.model.VmApplication;
+			
+			import mx.collections.ArrayCollection;
+			
+			import spark.events.IndexChangeEvent;
+			
+			[Bindable]
+			public var applications:ArrayCollection;
+
+			protected function applicationList_changeHandler(event:IndexChangeEvent):void
+			{
+				if(applicationList.selectedItem != null)
+				{
+					var app:VmApplication = applicationList.selectedItem as VmApplication;
+					var appSelectedEvent:ApplicationSelectedEvent = new ApplicationSelectedEvent(ApplicationSelectedEvent.APPLICATION_SELECTED, app);
+					
+					dispatchEvent( appSelectedEvent );
+				}
+			}
+
+		]]>
+	</fx:Script>
+	<s:layout>
+		<s:VerticalLayout />
+	</s:layout>
+	
+	<view:ApplicationSearch width="100%" />
+	
+	<s:List width="100%" height="100%" id="applicationList" dataProvider="{applications}" labelField="name" change="applicationList_changeHandler(event)" />
+	
+	
+</s:Panel>

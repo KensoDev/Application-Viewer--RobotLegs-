@@ -3,12 +3,26 @@
 			   xmlns:s="library://ns.adobe.com/flex/spark"
 			   xmlns:mx="library://ns.adobe.com/flex/mx"
 			   minWidth="955"
-			   minHeight="600">
+			   minHeight="600"
+			   xmlns:view="com.vmware.appViewer.view.*"
+			   xmlns:core="com.vmware.appViewer.core.*">
 	<fx:Declarations>
-		<!-- Place non-visual elements (e.g., services, value objects) here -->
+		<core:VmAppViewerContext contextView="{this}"/>
 	</fx:Declarations>
-
-
-
+	
+	<view:ApplicationDetails x="246"
+							 y="10"
+							 width="685"
+							 height="304"/>
+	
+	<view:ApplicationList x="10"
+						  y="10"
+						  width="228"
+						  height="580"/>
+	
+	<view:ApplicationSales x="246"
+						   y="319"
+						   height="271"
+						   width="685"/>
 
 </s:Application>
