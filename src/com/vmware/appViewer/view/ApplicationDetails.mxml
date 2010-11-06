@@ -1,66 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<s:Panel xmlns:fx="http://ns.adobe.com/mxml/2009" 
+<s:Panel xmlns:fx="http://ns.adobe.com/mxml/2009"
 		 xmlns:s="library://ns.adobe.com/flex/spark"
 		 title="Application Details"
-		 xmlns:mx="library://ns.adobe.com/flex/mx" width="400" height="300">
+		 xmlns:mx="library://ns.adobe.com/flex/mx"
+		 width="400"
+		 height="300">
 	<fx:Declarations>
 		<!-- Place non-visual elements (e.g., services, value objects) here -->
 	</fx:Declarations>
-	
+
 	<fx:Script>
 		<![CDATA[
 			import com.vmware.appViewer.model.VmApplication;
-			
+
 			[Bindable]
 			public var vmApplication:VmApplication;
-			
-			/* public var applicationId:int;
-			public var creatorName:String;
-			public var description:String;
-			public var mainNamespace:String;
-			public var name:String;
-			public var numberOfFiles:int;
-			public var size:int; */
-			
 		]]>
 	</fx:Script>
-	
-	
-	<mx:Form width="100%" id="applicationEditForm" visible="{vmApplication != null}">
-		 
-		<mx:FormHeading label="Edit: {vmApplication.name}" />
-		
-		<mx:FormItem width="100%" label="Name">
-			<mx:TextInput text="{vmApplication.name}" />
+
+
+	<mx:Form width="100%"
+			 id="applicationEditForm"
+			 visible="{vmApplication != null}">
+
+		<mx:FormHeading label="Edit: {vmApplication.name}"/>
+
+		<mx:FormItem width="100%"
+					 label="Name">
+			<mx:TextInput text="{vmApplication.name}"/>
 		</mx:FormItem>
-		
-		<mx:FormItem width="100%" label="ApplicationId">
-			<mx:Label text="{vmApplication.applicationId}" />
+
+		<mx:FormItem width="100%"
+					 label="ApplicationId">
+			<mx:Label text="{vmApplication.applicationId}"/>
 		</mx:FormItem>
-		
-		<mx:FormItem width="100%" label="Creator Name">
-			<mx:TextInput text="{vmApplication.creatorName}" />
+
+		<mx:FormItem width="100%"
+					 label="Creator Name">
+			<mx:TextInput text="{vmApplication.creatorName}"/>
 		</mx:FormItem>
-		
-		<mx:FormItem width="100%" label="Description">
-			<mx:TextArea text="{vmApplication.description}" />
+
+		<mx:FormItem width="100%"
+					 label="Description">
+			<mx:TextArea text="{vmApplication.description}"/>
 		</mx:FormItem>
-		
-		<mx:FormItem width="100%" label="Main Namespace">
-			<mx:TextInput text="{vmApplication.mainNamespace}" />
+
+		<mx:FormItem width="100%"
+					 label="Main Namespace">
+			<mx:TextInput text="{vmApplication.mainNamespace}"/>
 		</mx:FormItem>
-		
-		<mx:FormItem width="100%" label="Number Of files">
-			<mx:Label text="{vmApplication.numberOfFiles}" />			
+
+		<mx:FormItem width="100%"
+					 label="Number Of files">
+			<mx:Label text="{vmApplication.numberOfFiles}"/>
 		</mx:FormItem>
-		
-		<mx:FormItem width="100%" label="Size">
-			<mx:Label text="{vmApplication.size}" />
+
+		<mx:FormItem width="100%"
+					 label="Size">
+			<mx:Label text="{vmApplication.size}"/>
 		</mx:FormItem>
-		
-		
+
+
 	</mx:Form>
-	
-	
-	
+
+
+
 </s:Panel>

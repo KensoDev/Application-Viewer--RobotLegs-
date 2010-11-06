@@ -4,7 +4,7 @@ package com.vmware.appViewer.core
 
 	public interface IApplicationSearchService
 	{
-		function getApplications(appName:String = ""):void
+		function getApplications(appName:String=""):void
 		function getApplicationSales(application:VmApplication):void;
 	}
 }

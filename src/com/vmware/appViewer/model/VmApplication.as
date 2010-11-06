@@ -12,6 +12,6 @@ package com.vmware.appViewer.model
 		public var mainNamespace:String;
 		public var name:String;
 		public var numberOfFiles:int;
-		public var size:int;	
+		public var size:int;
 	}
 }

@@ -13,9 +13,10 @@
 	<fx:Script>
 		<![CDATA[
 			import com.vmware.appViewer.event.ApplicationSearchEvent;
+
 			protected function cmdSearch_clickHandler(event:MouseEvent):void
 			{
-				dispatchEvent( new ApplicationSearchEvent(ApplicationSearchEvent.SEARCH_APPLICATION, txtSearchInput.text ) );
+				dispatchEvent(new ApplicationSearchEvent(ApplicationSearchEvent.SEARCH_APPLICATION, txtSearchInput.text));
 			}
 		]]>
 	</fx:Script>

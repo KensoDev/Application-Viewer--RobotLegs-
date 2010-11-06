@@ -13,26 +13,26 @@ package com.vmware.appViewer.core
 	import com.vmware.appViewer.view.mediator.ApplicationListMediator;
 	import com.vmware.appViewer.view.mediator.ApplicationSalesMediator;
 	import com.vmware.appViewer.view.mediator.ApplicationSearchMediator;
-	
+
 	import flash.display.DisplayObjectContainer;
-	
+
 	import org.robotlegs.mvcs.Context;
-	
+
 	public class VmAppViewerContext extends Context
 	{
-		
+
 		public override function startup():void
 		{
-			injector.mapSingletonOf( IApplicationSearchService, ApplicationSearchService );
-			
-			commandMap.mapEvent( ApplicationSearchEvent.SEARCH_APPLICATION, ApplicationSearchCommand );
-			commandMap.mapEvent( ApplicationSelectedEvent.APPLICATION_SELECTED, ApplicationSaleCommand );
-			
-			mediatorMap.mapView( ApplicationDetails, ApplicationDetailsMediator );
-			mediatorMap.mapView( ApplicationSales, ApplicationSalesMediator );
-			mediatorMap.mapView( ApplicationList, ApplicationListMediator );
-			mediatorMap.mapView( ApplicationSearch, ApplicationSearchMediator );
+			injector.mapSingletonOf(IApplicationSearchService, ApplicationSearchService);
+
+			commandMap.mapEvent(ApplicationSearchEvent.SEARCH_APPLICATION, ApplicationSearchCommand);
+			commandMap.mapEvent(ApplicationSelectedEvent.APPLICATION_SELECTED, ApplicationSaleCommand);
+
+			mediatorMap.mapView(ApplicationDetails, ApplicationDetailsMediator);
+			mediatorMap.mapView(ApplicationSales, ApplicationSalesMediator);
+			mediatorMap.mapView(ApplicationList, ApplicationListMediator);
+			mediatorMap.mapView(ApplicationSearch, ApplicationSearchMediator);
 		}
-		
+
 	}
 }

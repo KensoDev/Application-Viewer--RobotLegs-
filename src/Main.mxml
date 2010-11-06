@@ -9,17 +9,17 @@
 	<fx:Declarations>
 		<core:VmAppViewerContext contextView="{this}"/>
 	</fx:Declarations>
-	
+
 	<view:ApplicationDetails x="246"
 							 y="10"
 							 width="685"
 							 height="304"/>
-	
+
 	<view:ApplicationList x="10"
 						  y="10"
 						  width="228"
 						  height="580"/>
-	
+
 	<view:ApplicationSales x="246"
 						   y="319"
 						   height="271"
