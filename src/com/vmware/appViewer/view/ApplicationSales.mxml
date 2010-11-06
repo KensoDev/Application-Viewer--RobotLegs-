@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<s:Group xmlns:fx="http://ns.adobe.com/mxml/2009"
+<s:Panel xmlns:fx="http://ns.adobe.com/mxml/2009"
 		 xmlns:s="library://ns.adobe.com/flex/spark"
 		 xmlns:mx="library://ns.adobe.com/flex/mx"
 		 width="400"
 		 height="300"
-		 currentState="LineChart">
+		 currentState="LineChart"
+		 title="Application Sales">
 	<fx:Declarations>
 		<mx:SeriesInterpolate id="seriesInterpolate"
 							  duration="1000"/>
@@ -22,7 +23,10 @@
 	</fx:Declarations>
 
 	<s:layout>
-		<s:VerticalLayout/>
+		<s:VerticalLayout paddingLeft="5"
+						  paddingTop="5"
+						  paddingRight="5"
+						  paddingBottom="5"/>
 	</s:layout>
 
 	<fx:Script>
@@ -48,7 +52,7 @@
 
 	<s:Group width="100%">
 		<s:layout>
-			<s:HorizontalLayout/>
+			<s:HorizontalLayout verticalAlign="middle"/>
 		</s:layout>
 		<s:Label text="Select Application Type"/>
 		<s:DropDownList id="controlState"
@@ -88,4 +92,4 @@
 		</mx:horizontalAxis>
 	</mx:ColumnChart>
 
-</s:Group>
+</s:Panel>
