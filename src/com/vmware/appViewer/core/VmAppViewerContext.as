@@ -33,6 +33,5 @@ package com.vmware.appViewer.core
 			mediatorMap.mapView(ApplicationList, ApplicationListMediator);
 			mediatorMap.mapView(ApplicationSearch, ApplicationSearchMediator);
 		}
-
 	}
 }
