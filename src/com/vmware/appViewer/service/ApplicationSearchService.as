@@ -50,7 +50,6 @@ package com.vmware.appViewer.service
 		public function getApplications(appName:String=""):void
 		{
 			_appService.addEventListener(ResultEvent.RESULT, service_getApplicationResultHandler_Handler);
-			_appService.addEventListener(FaultEvent.FAULT, service_Fault_Handler);
 
 			if (appName == "")
 				_appService.getApplications();
