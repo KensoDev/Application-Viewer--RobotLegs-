@@ -24,8 +24,8 @@ package com.vmware.appViewer.service
 		{
 			_appService=new RemoteObject("application-viewer");
 			
-			_appService.getApplications.addEventListener( ResultEvent.RESULT, getApplications_Result_Handler);
 			_appService.getApplicationSales.addEventListener( ResultEvent.RESULT, getApplicationSales_Result_Handler);
+			_appService.getOperation("getApplications").addEventListener( ResultEvent.RESULT, getApplications_Result_Handler);
 
 			_appService.removeEventListener(FaultEvent.FAULT, service_Fault_Handler);
 		}
